@@ -1,0 +1,28 @@
+.allborder  {
+border:1px rgb(178, 171, 171) solid;
+}
+.allborder {
+
+    padding:0px 0px;
+}
+.allborder p{
+    margin: 10px 10px;
+}
+.begin{
+    color:white;background-color: rgb(12, 12, 100);;
+}
+.color{
+    color:azure;
+}
+.grey{
+    color:grey;
+}
+.button{
+    background-color: rgb(11, 11, 97);color:white;
+}
+.text{
+    font-size: 20px;
+}
+body{
+    font-family:Noto Sans, sans-serif;
+}
