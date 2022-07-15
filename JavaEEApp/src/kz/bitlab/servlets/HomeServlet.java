@@ -21,11 +21,16 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 
+        String name = request.getParameter("user_name");
+        String surname = request.getParameter("user_surname");
+        String order  = request.getParameter("order");
 
-        PrintWriter out = response.getWriter();
 
-        out.println("Hello");
 
+        String result = name + " " + surname + " " + "ordered"  + " " + order;
+        response.setContentType("text/html");
+        PrintWriter out  = response.getWriter();
+        out.print("<h1 style = 'color:black;'>"+result+"</h1>");
 
     }
 

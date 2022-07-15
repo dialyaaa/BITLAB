@@ -9,7 +9,6 @@
 <html>
 <head>
 
-    <title>Title</title>
     <style>
     .pad{
     flex-direction: column;
@@ -19,7 +18,7 @@
 
 </head>
 <body>
-<form>
+<form action="/home" method="get">
     <div>
 <label>Name:</label>
     <input type="text" name="user_name">
@@ -29,7 +28,16 @@
     <input type="text" name="user_surname">
     </div>
     <div>
-<button>Send</button>
+        <select name="order">
+            <option>Manty - 900 KZT</option>
+            <option>Kasha - 500 KZT</option>
+            <option>Mango fresh - 800 KZT</option>
+            <option>Ornage juice - 900 KZT</option>
+        </select>
+    </div>
+    <div>
+
+<button>ORDER</button>
     </div>
 </form>
 </body>
