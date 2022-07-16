@@ -13,6 +13,8 @@ import java.io.IOException;
 
 import java.io.PrintWriter;
 
+import static java.lang.Integer.parseInt;
+
 @WebServlet(value = "/home")
 public class HomeServlet extends HttpServlet {
     @Override
@@ -22,15 +24,32 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 
         String name = request.getParameter("user_name");
-        String surname = request.getParameter("user_surname");
-        String order  = request.getParameter("order");
+        int age  = parseInt(request.getParameter("user_age"));
+        String gender = request.getParameter("form_color");
 
 
-
-        String result = name + " " + surname + " " + "ordered"  + " " + order;
         response.setContentType("text/html");
         PrintWriter out  = response.getWriter();
-        out.print("<h1 style = 'color:black;'>"+result+"</h1>");
+        String word  = "";
+
+        if(age>=18){
+        word="Dear";
+        }
+        else{
+            word="Dude";
+        }
+        String gen = "";
+        if("male".equals(gender)){
+            gen = "Miss";
+        }
+        else{
+            gen = "Mister";
+        }
+        out.print("<h1>"+"Hello" + " " + word+ " " + gen + " " +  name + "!"+"</h1>" );
+
+
+
+
 
     }
 

@@ -20,25 +20,37 @@
 <body>
 <form action="/home" method="get">
     <div>
-<label>Name:</label>
+<label> Full Name:</label>
     <input type="text" name="user_name">
     </div>
     <div>
-  <label>Surname:</label>
-    <input type="text" name="user_surname">
+  <label>Age:</label>
+    <input type="text" name="user_age">
     </div>
     <div>
-        <select name="order">
-            <option>Manty - 900 KZT</option>
-            <option>Kasha - 500 KZT</option>
-            <option>Mango fresh - 800 KZT</option>
-            <option>Ornage juice - 900 KZT</option>
+
+        <label>Gender:</label>
+        male<input  type="radio" name="form_color"  value="male">
+        female<input  type="radio" name="form_color" value="female">
         </select>
     </div>
     <div>
 
-<button>ORDER</button>
+<button >ORDER</button>
     </div>
 </form>
+<script>
+   function x() {
+
+       var a  = document.getElementById("male");
+       var d = "";
+       if(a.checked){
+           d = 'Miss';
+       }
+       else{
+            d='Mister';
+       }
+   }
+</script>
 </body>
 </html>
