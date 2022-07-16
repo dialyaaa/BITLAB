@@ -20,37 +20,19 @@
 <body>
 <form action="/home" method="get">
     <div>
-<label> Full Name:</label>
+<label> Full NAME:</label>
     <input type="text" name="user_name">
     </div>
     <div>
-  <label>Age:</label>
-    <input type="text" name="user_age">
+  <label>EXAM POINTS:</label>
+    <input type="text" name="user_point">
     </div>
+
     <div>
 
-        <label>Gender:</label>
-        male<input  type="radio" name="form_color"  value="male">
-        female<input  type="radio" name="form_color" value="female">
-        </select>
-    </div>
-    <div>
-
-<button >ORDER</button>
+<button >SUBMIT EXAM</button>
     </div>
 </form>
-<script>
-   function x() {
 
-       var a  = document.getElementById("male");
-       var d = "";
-       if(a.checked){
-           d = 'Miss';
-       }
-       else{
-            d='Mister';
-       }
-   }
-</script>
 </body>
 </html>

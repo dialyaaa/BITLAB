@@ -24,28 +24,30 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 
         String name = request.getParameter("user_name");
-        int age  = parseInt(request.getParameter("user_age"));
-        String gender = request.getParameter("form_color");
-
+        int point  = parseInt(request.getParameter("user_point"));
 
         response.setContentType("text/html");
         PrintWriter out  = response.getWriter();
-        String word  = "";
+        String p = "";
+        if(point>=90){
+            p = "A";
+        }
+        else if(point>=75 && point<=89){
+            p ="B";
+        }
+        else if(point>=60 && point<=74){
+            p = "C";
+        }
+        else if(point>=50 && point<=59){
+            p = "D";
+        }
+        else{
+            p= "F";
+        }
 
-        if(age>=18){
-        word="Dear";
-        }
-        else{
-            word="Dude";
-        }
-        String gen = "";
-        if("male".equals(gender)){
-            gen = "Miss";
-        }
-        else{
-            gen = "Mister";
-        }
-        out.print("<h1>"+"Hello" + " " + word+ " " + gen + " " +  name + "!"+"</h1>" );
+        out.print(name + " got " + p +  " for exam!");
+
+
 
 
 
